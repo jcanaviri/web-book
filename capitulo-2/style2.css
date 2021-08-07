@@ -10,6 +10,7 @@ p.text2 + p {
   color: green;
 }
 
+/* Todos los elementos precedidos por p.text3 */
 p.text3 ~ p {
   color: blue;
 }
