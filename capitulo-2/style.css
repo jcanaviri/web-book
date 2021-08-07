@@ -1,0 +1,12 @@
+/* Solamente el elemento que posean ID text */
+#text {
+  font-size: 20px;
+}
+/* Todos los que posean la class="texts" */
+.texts {
+  font-size: 20px;
+}
+/* Todos los ´p´ que posean la class="texts" */
+p.texts {
+  font-size: 20px;
+}
