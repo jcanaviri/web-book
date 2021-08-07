@@ -1,3 +1,9 @@
+/* Selector universal de todos los elementos */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 /* Solamente el elemento que posean ID text */
 #text {
   font-size: 20px;
@@ -9,4 +15,17 @@
 /* Todos los ´p´ que posean la class="texts" */
 p.texts {
   font-size: 20px;
+}
+
+/* Todos los 'p' que tengan el atributo name="textField" */
+p[name="textField"] {
+  font-size: 20px;
+}
+
+/* Todos los impares y pares */
+p:nth-child(odd) {
+  background-color: #999;
+}
+p:nth-child(even) {
+  background-color: #ccc;
 }

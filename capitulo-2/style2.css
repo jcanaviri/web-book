@@ -1,0 +1,15 @@
+/* Unicamente el elemento p con class=text y
+que sea hijo directo de div */
+div > p.text {
+  color: green;
+}
+
+/* El elemento p que esta justamente precedido
+por un p que tenga la class=text2 */
+p.text2 + p {
+  color: green;
+}
+
+p.text3 ~ p {
+  color: blue;
+}
