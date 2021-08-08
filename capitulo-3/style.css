@@ -14,5 +14,10 @@ body {
   box-shadow: 5px 5px 10px rgba(150, 150, 150) inset;
 }
 #title {
-  font: bold 36px verdana, sans-serif;
+  font: bold 36px MyFont, sans-serif;
+  text-shadow: 3px 3px 5px rgb(0, 0, 150);
+}
+@font-face {
+    font-family: 'MyFont';
+    src: url('font.ttf');
 }
