@@ -21,6 +21,17 @@ body {
 
   outline: 2px dashed #000099;
   outline-offset: 15px;
+
+  transition: transform 1s ease-in-out 0.5s;
+
+  /* transform: scale(1, -1); */
+  /* transform: rotate(30deg); */
+  /* transform: skew(20deg); */
+  /* transform: translate(100px); */
+  /* transform: translateX(100px) rotate(45deg) scaleX(.3); */
+}
+#main:hover {
+  transform: rotate(5deg);
 }
 #title {
   /* Gabrielle font */
