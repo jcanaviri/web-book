@@ -7,20 +7,29 @@ body {
   margin: 50px auto;
   padding: 15px;
   text-align: center;
-  border: 1px solid #999;
+  border: 29px;
+  -webkit-border-image: url('rombo.jpg') 29 stretch;
+  -moz-border-image: url('rombo.jpg') 29 stretch;
+  border-image: url('rombo.jpg') 29 stretch;
 
   border-radius: 20px;
   box-shadow: 5px 5px 10px rgba(150, 150, 150);
 
-  background: -webkit-linear-gradient(top, #fff 50%, #006699 90%);
-  background: -moz-linear-gradient(top, #fff 50%, #006699 90%);
-  background: linear-gradient(top, #fff 50%, #006699 90%);
+  background: -webkit-radial-gradient(center, circle, #fff 0%, #006699 200%);
+  background: -moz-radial-gradient(center, circle, #fff 0%, #006699 200%);
+  background: radial-gradient(center, circle, #fff 0%, #006699 200%);
+
+  outline: 2px dashed #000099;
+  outline-offset: 15px;
 }
 #title {
+  /* Gabrielle font */
   font: bold 36px MyFont, sans-serif;
-  text-shadow: 3px 3px 5px rgb(0, 0, 150);
+  text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  /* hsla(tono, saturacion, luminosidad, opacidad ) */
+  color: hsla(120, 100%, 40%, .5);
 }
 @font-face {
-    font-family: 'MyFont';
-    src: url('font.ttf');
+  font-family: 'MyFont';
+  src: url('font.ttf');
 }
