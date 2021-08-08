@@ -1,0 +1,17 @@
+body {
+  text-align: center;
+}
+#main {
+  display: block;
+  width: 500px;
+  margin: 50px auto;
+  padding: 15px;
+  text-align: center;
+  border: 1px solid #999;
+  background-color: #ddd;
+
+  border-radius: 20px 10px 30px 50px;
+}
+#title {
+  font: bold 36px verdana, sans-serif;
+}
