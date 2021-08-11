@@ -5,8 +5,8 @@ function showAlert() {
 function makeClick() {
   let list = document.querySelectorAll('p');
   list.forEach(item => {
-    item.onclick = showAlert;
+    item.addEventListener('click', showAlert, false);
   });
 }
 
-window.onload = makeClick;
+window.addEventListener('load', makeClick);
