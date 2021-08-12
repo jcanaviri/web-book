@@ -11,3 +11,5 @@ Este es un repositorio con los apuntes de un libro de programación web.
 :four: [capitulo-4](./capitulo-4/include-js.html) introduccion a javascript en el dom 
 
 :five: [capitulo-5](./capitulo-5/video.html) audio y video en la web 
+
+:six: [capitulo-6](./capitulo-6/index.html) uso de formularios 
