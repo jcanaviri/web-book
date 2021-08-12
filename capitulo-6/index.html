@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+
+<body>
+    <nav>
+        <input type="search" name="busqueda" id="busqueda" form="miformulario">
+    </nav>
+
+    <section>
+        <form id="miformulario" name="miformulario" method="post">
+            <input type="text" name="nombre" id="nombre"> <br><br>
+            <input type="email" name="miemail" id="miemail" required> <br><br>
+            <input type="search" name="busqueda" id="busqueda" placeholder="Escribe tu busqueda" autofocus> <br><br>
+            <input type="number" min="0" max="10"> <br><br>
+            <input type="date" name="mifecha" id="mifecha"> <br><br>
+            <input type="week" name="semana" id="semana"> <br><br>
+            <input type="month" name="mes" id="mes"> <br><br>
+            <input type="time" name="hora" id="hora"> <br><br>
+            <input type="datetime" name="fechahora" id="fechahora"> <br><br>
+            <input type="color" name="micolor" id="micolor"> <br><br>
+            <input pattern="[0-9]{5}" name="codigopostal" id="codigopostal"
+                title="inserte los 5 números de su código postal"> <br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
+    </section>
+</body>
+
+</html>
