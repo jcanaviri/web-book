@@ -6,7 +6,10 @@ function iniciar() {
   // Genera un circulo con los parámetros de:
   // arc(pos_x, pos_y, radio, angulo_inicio, angulo_fin)
   // los ángulos se colocan en radianes 180° = PI
-  lienzo.arc(100, 100, 50, 0, Math.PI*2, false); 
+  let radian = (Math.PI / 180) * 45;
+  // El valor boolean indica si el sentido de la curva
+  // es de acuedo a la manecillas del reloj o no
+  lienzo.arc(100, 100, 50, 0, radian, true);
   lienzo.stroke();
 }
 
