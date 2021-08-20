@@ -13,3 +13,5 @@ Este es un repositorio con los apuntes de un libro de programación web.
 :five: [capitulo-5](./capitulo-5/video.html) audio y video en la web 
 
 :six: [capitulo-6](./capitulo-6/index.html) uso de formularios 
+
+:seven: [capitulo-7](./capitulo-7/canvas.html) uso de canvas API
