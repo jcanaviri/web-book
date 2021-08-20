@@ -3,10 +3,10 @@ function iniciar() {
   let lienzo = elemento.getContext('2d');
 
   lienzo.beginPath();
-  lienzo.moveTo(100, 100);
-  lienzo.lineTo(200, 200);
-  lienzo.lineTo(100, 200);
-  lienzo.fill();
+  // Genera un circulo con los parámetros de:
+  // arc(pos_x, pos_y, radio, angulo_inicio, angulo_fin)
+  // los ángulos se colocan en radianes 180° = PI
+  lienzo.arc(100, 100, 50, 0, Math.PI*2, false); 
   lienzo.stroke();
 }
 
