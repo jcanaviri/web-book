@@ -1,49 +1,37 @@
 'use strict';
 
-let origen1 = document.getElementById('img');
+let imagenes = document.querySelectorAll('#cajaimagenes > img');
 let soltar = document.getElementById('cajasoltar');
 
 function iniciar() {
-  origen1.addEventListener('dragstart', arrastrado, false);
-  origen1.addEventListener('dragend', finalizado, false);
+  imagenes.forEach((img) => {
+    img.addEventListener('dragstart', arrastrado, false);
+  });
 
-  soltar.addEventListener('dragenter', entrando, false);
-  soltar.addEventListener('dragleave', saliendo, false);
-  soltar.addEventListener(
-    'dragover',
-    function (e) {
-      e.preventDefault();
-    },
-    false
-  );
 
+  soltar.addEventListener('dragenter', function(e) {e.preventDefault();}, false);
+  soltar.addEventListener('dragover', function(e) {e.preventDefault();}, false);
+  
   soltar.addEventListener('drop', soltado, false);
-}
-
-function entrando(e) {
-  e.preventDefault();
-  soltar.style.background = 'rgba(0, 150, 0,.2)';
-}
-function saliendo(e) {
-  e.preventDefault();
-  soltar.style.background = '#fff';
-}
-function finalizado(e) {
-  let elemento = e.target;
-  elemento.parentNode.style.display = 'none';
 }
 
 function arrastrado(e) {
   e.dataTransfer.effectAllowed = 'move';
-
-  let codigo = `<img src="${origen1.getAttribute('src')}">`;
+  let elemento = e.target;
+  let codigo = elemento.getAttribute('id');
   e.dataTransfer.setData('text', codigo);
 }
 
 function soltado(e) {
   e.preventDefault();
-  soltar.style.background = '#fff';
-  soltar.innerHTML = e.dataTransfer.getData('text');
+  let id = e.dataTransfer.getData('text');
+  if (id != 'img4') {
+    let src = document.getElementById(id).src;
+    soltar.innerHTML = `<img src="${src}">`;
+  } else {
+    soltar.innerHTML = 'La imagen no es valida';
+  }
+
 }
 
 window.addEventListener('load', iniciar, false);
