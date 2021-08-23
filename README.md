@@ -19,3 +19,5 @@ Este es un repositorio con los apuntes de un libro de programación web.
 :eight: [capitulo-8](./capitulo-8/index.html) conociendo api drag and drop
 
 :nine: [capitulo-9](./capitulo-9/index.html) API geolocalization
+
+:ten: [capitulo-9](./capitulo-9/index.html) Local y Session Storage
