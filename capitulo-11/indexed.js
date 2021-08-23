@@ -20,11 +20,11 @@ function errores(e) {
 }
 function crear(e) {
   db = e.result || e.target.result;
-  mostrar();
 }
 function crearDB(e) {
   db = e.result || e.target.result;
-  db.createObjectStore('peliculas', { keyPath: 'id' });
+  let almacen = db.createObjectStore('peliculas', { keyPath: 'id' });
+  almacen.createIndex('BuscarFecha', 'fecha', { unique: false });
 }
 
 function agregarobjeto() {
