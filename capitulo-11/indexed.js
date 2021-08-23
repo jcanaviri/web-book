@@ -20,6 +20,7 @@ function errores(e) {
 }
 function crear(e) {
   db = e.result || e.target.result;
+  mostrar();
 }
 function crearDB(e) {
   db = e.result || e.target.result;
@@ -39,18 +40,23 @@ function agregarobjeto() {
   document.getElementById('clave').value = '';
   document.getElementById('texto').value = '';
   document.getElementById('fecha').value = '';
-  mostrar(clave);
+  mostrar();
 }
 
-function mostrar(clave) {
+function mostrar() {
+  cajadatos.innerHTML = '';
   let transaccion = db.transaction(['peliculas']);
   let almacen = transaccion.objectStore('peliculas');
-  let solicitud = almacen.get(clave);
-  solicitud.addEventListener('success', mostrarlista, false);
+
+  let cursor = almacen.openCursor(null, IDBCursor.NEXT);
+  cursor.addEventListener('success', mostrarlista, false);
 }
 function mostrarlista(e) {
-  let result = e.result || e.target.result;
-  cajadatos.innerHTML = `<div>${result.id} - ${result.titulo} - ${result.fecha}</div>`;
+  let cursor = e.result || e.target.result;
+  if (cursor) {
+    cajadatos.innerHTML += `<div>${cursor.value.id} - ${cursor.value.titulo} - ${cursor.value.fecha}</div>`;
+    cursor.continue();
+  }
 }
 
 window.addEventListener('load', iniciar, false);
