@@ -54,8 +54,20 @@ function mostrar() {
 function mostrarlista(e) {
   let cursor = e.result || e.target.result;
   if (cursor) {
-    cajadatos.innerHTML += `<div>${cursor.value.id} - ${cursor.value.titulo} - ${cursor.value.fecha}</div>`;
+    cajadatos.innerHTML += `<div>
+      ${cursor.value.id} - ${cursor.value.titulo} - ${cursor.value.fecha}
+      <button onclick="eliminar('${cursor.value.id}');">Eliminar</button>
+    </div>`;
     cursor.continue();
+  }
+}
+
+function eliminar(clave) {
+  if (confirm('Estas seguro?')) {
+    let transaccion = db.transaction(['peliculas'], 'readwrite');
+    let almacen = transaccion.objectStore('peliculas');
+    let solicitud = almacen.delete(clave);
+    solicitud.addEventListener('success', mostrar, false);
   }
 }
 
