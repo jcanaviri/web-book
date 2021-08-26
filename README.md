@@ -2,7 +2,7 @@
 
 Este es un repositorio con los apuntes de un libro de programación web.
 
-:one: [capitulo-1](./capitulo-1/my-code.html) se crea una estructura básica de una web y se utilizan etiquetas adecuadas 
+:one: [capitulo-1](./capitulo-1/my-code.html) Elementos básicos de HTML
 
 :two: [capitulo-2](./capitulo-2/index.html) se explican las formas de incluir css y los estilos basicos a conocer 
 
