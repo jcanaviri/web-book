@@ -9,7 +9,7 @@ function obtener() {
     maximumAge: 6000,
   };
   navigator.geolocation.getCurrentPosition(mostrar, errors, geoconfig);
-  let control = navigator.geolocation.watchPosition(mostrar, errors, geoconfig);
+  navigator.geolocation.watchPosition(mostrar, errors, geoconfig);
 }
 
 function errors(err) {
@@ -18,7 +18,9 @@ function errors(err) {
 
 function mostrar(posicion) {
   let ubicacion = document.getElementById('ubicacion');
-  let datos = `
+  let content = document.querySelector('.content');
+
+  content.innerHTML = `
   Latitud: ${posicion.coords.latitude}<br>
   Longitud: ${posicion.coords.longitude}<br>
   Exactitud: ${posicion.coords.accuracy}<br>`;
