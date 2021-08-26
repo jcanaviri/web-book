@@ -20,4 +20,4 @@ Este es un repositorio con los apuntes de un libro de programación web.
 
 :nine: [capitulo-9](./capitulo-9/index.html) API geolocalization
 
-:ten: [capitulo-10](./capitulo-10/index.html) Local y Session Storage
+:one::zero: [capitulo-10](./capitulo-10/index.html) Local y Session Storage
